@@ -101,6 +101,14 @@ ENV LC_MONETARY="C.UTF-8"
 ENV LC_NUMERIC="C.UTF-8"
 ENV LC_TIME="C.UTF-8"
 
+RUN apk update && \
+    apk add --update libc-dev gcc geth build-base curl openssh \
+    the_silver_searcher
+
+RUN go get -u github.com/mdempsky/gocode
+
+ENV FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
 # RUN go get -d -v github.com/maliceio/engine/...
 
 ENTRYPOINT ["tmux"]
