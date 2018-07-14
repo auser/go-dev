@@ -1,4 +1,4 @@
-ORG=blacktop
+ORG=auser
 NAME=go-dev
 VERSION?=$(shell cat VERSION)
 
