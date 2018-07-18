@@ -1,6 +1,6 @@
 FROM golang:1.10-alpine
 
-LABEL maintainer "https://github.com/blacktop"
+LABEL maintainer "https://github.com/auser"
 
 RUN apk add --no-cache ca-certificates git python3 ctags tzdata bash neovim neovim-doc
 
